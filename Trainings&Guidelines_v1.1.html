@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PETA - Training & Guidelines</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
+    <link rel="shortcut icon" href="Images/PETA-Fav.png" type="image/x-icon">
+
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-image: url("C:/Users/mvn.sreevinay/OneDrive - S&P Global/Documents/IMP-Projects/PETA-Investment_Management_Profiles/Inputs/491362538070.jpg");
+            background-size: cover; /* Ensures the background covers the entire page */
+            background-repeat: no-repeat; /* Prevents the image from repeating */
+            background-attachment: fixed; /* Keeps the background fixed while scrolling */
+            background-position: center; /* Centers the background image */
+        }
+
+        .logo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 100px;
+            height: auto;
+            z-index: 10;
+        }
+
+        .header-container {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+
+        .header-title {
+            font-size: 32px;
+            color: #E03C31;
+            margin: 0;
+            font-weight: 700;
+        }
+
+        .current-date-container {
+            font-size: 14px;
+            color: #000000;
+            text-align: right;
+            margin-top: 10px;
+        }
+
+        .modified-info {
+            color: #000000;
+        }
+
+        .search-container {
+            position: absolute;
+            top: 20px; /* Adjust based on your layout */
+            right: 20px; /* Adjust based on your layout */
+            display: flex;
+            align-items: center;
+        }
+
+        .search-input {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            outline: none;
+        }
+
+        .search-button {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            margin-left: 5px;
+        }
+
+        .search-icon {
+            width: 20px; /* Adjust size as needed */
+            height: auto;
+        }
+
+        .home-button {
+            position: absolute;
+            top: 20px; /* Adjust based on your layout */
+            left: 150px; /* Position it next to the logo */
+            background: url("C:/Users/mvn.sreevinay/OneDrive - S&P Global/Documents/IMP-Projects/PETA-Investment_Management_Profiles/Inputs/Home.png") no-repeat center center;
+            background-size: contain; /* Ensures the icon fits within the button */
+            width: 40px; /* Width of the button */
+            height: 40px; /* Height of the button */
+            border: none;
+            cursor: pointer;
+            z-index: 10;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center the links */
+            justify-content: center; /* Center the links */
+            margin-top: 20px;
+            background-color: rgba(255, 255, 255, 0.8); /* Background for container */
+            padding: 20px;
+            border-radius: 8px; /* Rounded corners for container */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Shadow for container */
+            width: 350px; /* Set a specific width for the container */
+            margin-left: auto; /* Center the container */
+            margin-right: auto; /* Center the container */
+        }
+
+        h2 {
+            font-size: 18px;
+            color: #000000;
+            margin: 5px 0;
+        }
+
+        h2 a {
+            text-decoration: none;
+            color: #000000;
+            transition: background-color 0.3s, color 0.3s;
+            display: block;
+            margin: 10px 0;
+            padding: 10px; /* Uniform padding */
+            border: 1px solid #000000; /* Outline size */
+            border-radius: 5px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2), -2px -2px 5px rgba(255, 255, 255, 0.7);
+            width: 100%; /* Set button width to fill the container */
+            height: 50px; /* Fixed height for all buttons */
+            text-align: center; /* Center text in buttons */
+            line-height: 50px; /* Center text vertically */
+        }
+
+        h2 a:hover {
+            background-color: #D3D3D3; /* Highlight color */
+            color: #E03C31; /* Change text color on hover */
+            text-decoration: underline;
+            box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3), -4px -4px 5px rgba(255, 255, 255, 0.7);
+        }
+
+        .note {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="C:/Users/mvn.sreevinay/OneDrive - S&P Global/Documents/IMP-Projects/PETA-Investment_Management_Profiles/Inputs/Logo_v1.1.png" alt="PETA Logo" class="logo">
+
+    <div class="header-container">
+        <h1 class="header-title">Training & Guidelines</h1>
+        <div class="current-date-container" id="currentDate"></div>
+        <div class="modified-info" id="lastModified"></div>
+
+        <!-- Search Container -->
+        <div class="search-container">
+            <input type="text" placeholder="Search..." class="search-input" id="searchInput" onkeyup="searchFunction()">
+            <button class="search-button">
+                <img src="C:/Users/mvn.sreevinay/OneDrive - S&P Global/Documents/IMP-Projects/PETA-Investment_Management_Profiles/Inputs/Search Icon.png" alt="Search" class="search-icon">
+            </button>
+        </div>
+        
+        <!-- Home Button -->
+        <a href="C:\Users\mvn.sreevinay\OneDrive - S&P Global\Documents\IMP-Projects\PETA-Investment_Management_Profiles\Outputs\IM_Profiles_v8.1.html">
+            <button class="home-button"></button>
+        </a>
+    </div>
+
+    <div class="container">
+        <h2><a href="https://spgl.sharepoint.com/sites/IpreoResearch/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FIpreoResearch%2FShared%20Documents%2FBeginner%20training%2FNew%20Joiner%20Pack%2F01%20%2D%20Intro%20to%20Capital%20Markets%2Epdf&parent=%2Fsites%2FIpreoResearch%2FShared%20Documents%2FBeginner%20training%2FNew%20Joiner%20Pack" target="_blank">Capital Market Introduction</a></h2>
+        <h2><a href="https://spgl.sharepoint.com/sites/IpreoResearch/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FIpreoResearch%2FShared%20Documents%2FSession%2009%2DBuyside%20Staff%2F05%20%2D%20Buy%2DSide%20Staff" target="_blank">Buy Side Firm Types</a></h2>
+        <h2><a href="https://spgl-my.sharepoint.com/:w:/g/personal/pranavchand_gaddipa_spglobal_com/EdZjpm43rk5PuBWqpgTjG_UBYegkIyMkSJVjS7KllZcpZA?wdOrigin=TEAMS-MAGLEV.undefined_ns.rwc&wdExp=TEAMS-TREATMENT&wdhostclicktime=1733993551855&web=1" target="_blank">Qualification Criteria & Statuses</a></h2>
+        <h2><a href="https://spgl.sharepoint.com/:w:/r/sites/IpreoResearch/_layouts/15/Doc.aspx?sourcedoc=%7BC6CA11BD-027B-45F8-9FE1-F0478E6676B7%7D&file=03-Address%20Guidelines.doc&action=default&mobileredirect=true&DefaultItemOpen=1" target="_blank">Address Guidelines</a></h2>
+        <h2><a href="https://spgl.sharepoint.com/sites/IpreoResearch/Shared%20Documents/EXPANSION%20Folder/Style%20and%20Orientation.pdf" target="_blank">Style & Orientation</a></h2>
+        <h2><a href="https://example.com/link4" target="_blank">Link 4</a></h2>
+        <h2><a href="https://example.com/link4" target="_blank">Link 4</a></h2>
+        <h2><a href="https://example.com/link4" target="_blank">Link 4</a></h2>
+        <h2><a href="https://example.com/link4" target="_blank">Link 4</a></h2>
+        <h2><a href="https://example.com/link4" target="_blank">Link 4</a></h2>
+        <h2><a href="https://example.com/link4" target="_blank">Link 4</a></h2>
+        <h2><a href="https://example.com/link4" target="_blank">Link 4</a></h2>
+        <h2><a href="https://example.com/link4" target="_blank">Link 4</a></h2>
+        <h2><a href="https://example.com/link4" target="_blank">Link 4</a></h2>
+        <h2><a href="https://example.com/link4" target="_blank">Link 4</a></h2>
+        <h2><a href="https://example.com/link4" target="_blank">Link 4</a></h2>
+        <h2><a href="https://example.com/link4" target="_blank">Link 4</a></h2>
+        <h2><a href="https://example.com/link4" target="_blank">Link 4</a></h2>
+        <h2><a href="https://example.com/link4" target="_blank">Link 4</a></h2>
+    </div>
+
+    <div class="note">
+        *Note for Internal Use only
+    </div>
+
+    <script>
+        function updateCurrentDate() {
+            const now = new Date();
+            const optionsDate = { day: '2-digit', month: '2-digit', year: 'numeric' };
+            const currentDate = now.toLocaleDateString('en-GB', optionsDate);
+            document.getElementById("currentDate").innerHTML = `Date: ${currentDate}`;
+
+            const lastModifiedUser = "Modified by: Sree vinay Mvn";
+            const lastModifiedDate = `Last Modified: ${now.toLocaleString('en-GB', { dateStyle: 'short', timeStyle: 'short' })}`;
+            document.getElementById("lastModified").innerHTML = `<span class="modified-info">${lastModifiedUser} | ${lastModifiedDate}</span>`;
+        }
+
+        function searchFunction() {
+            const input = document.getElementById('searchInput');
+            const filter = input.value.toLowerCase();
+            const container = document.querySelector('.container');
+            const links = container.getElementsByTagName('h2');
+
+            for (let j = 0; j < links.length; j++) {
+                const linkText = links[j].textContent || links[j].innerText;
+                links[j].style.display = linkText.toLowerCase().indexOf(filter) > -1 ? "" : "none"; // Show or hide link
+            }
+        }
+
+        updateCurrentDate(); // Initial call
+    </script>
+</body>
+
+</html>
